@@ -1,0 +1,23 @@
+<script>
+    var nome, nota1, nota2, media, situacao;
+    
+    nome = prompt("Qual o nome do aluno? ");
+    nota1 = prompt("Digite a primeira nota: ");
+    nota2 = prompt("Digite a segunda nota: ");
+
+    if(Number.isInteger(parseInt(nota1))){
+        alert("Erro!!!");
+    }
+    
+    media = (parseInt(nota1) + parseInt(nota2))/2;
+
+    if(media > 6.5){
+      situacao = "APROVADO";
+    } else {
+      situacao = "REPROVADO";
+    }
+
+    document.write(nome + "</BR>");
+    document.write("Média : " + media + "</BR>");
+    document.write(situacao);
+</script>
