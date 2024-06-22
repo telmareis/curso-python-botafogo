@@ -1,0 +1,25 @@
+#barra{
+    background-color: gray;
+    height: 70px;
+}
+
+#conteudo{
+    background-color: burlywood;
+    height: 740px;
+    text-align: center;
+}
+
+#rodape{
+    background-color: cadetblue;
+    height: 70px;
+}
+
+#secao{
+    display: flex;
+    justify-content: center;
+    background-color: greenyellow;
+}
+
+table{
+    text-align: center;
+}
