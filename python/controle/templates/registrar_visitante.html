@@ -14,15 +14,29 @@
                 Formulário para registro de novo visitante
             </h4>
 
+            <p class="mb-5 ml=1">
+              <small>
+                (*) Campo obrigatório
+              </small>
+            </p>
+
             <form method="post">
                 <div class="form-row">
                   {% csrf_token %}
               
                   {% for field in form %}
                     <div class="form-group col-md-12">
+                      <label>{{ field.label }}</label>
+                      {% if field.field.required %} * {% endif %}
                       {% render_field field placeholder=field.label class="form-control" %}
                     </div>
                   {% endfor %}
+                </div>
+
+                <div class="text-right">
+                  <button class="btn btn-primary" type="submit">
+                    <span class="text">Registrar Visitante</span>
+                  </button>
                 </div>
             </form>
         </div>
