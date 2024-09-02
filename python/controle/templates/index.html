@@ -109,8 +109,8 @@
                             <td>{{ variavel.nome_completo }}</td>
                             <td>{{ variavel.cpf }}</td>
                             <td>{{ variavel.horario_chegada }}</td>
-                            <td>{{ variavel.horario_autorizacao }}</td>
-                            <td>{{ variavel.morador_responsavel }}</td>
+                            <td>{{ variavel.get_horario_autorizacao }}</td>
+                            <td>{{ variavel.get_morador_responsavel }}</td>
                             <td>
 
                                 <a href="{% url 'informacoes_visitante' id=variavel.id %}" >

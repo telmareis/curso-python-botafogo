@@ -2,8 +2,6 @@
 
 {% load static %}
 
-{% url "index" %}
-
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -32,7 +30,7 @@
                 <hr class="sidebar-divider my-0">
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{% url 'index' %}">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>

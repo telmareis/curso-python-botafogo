@@ -13,7 +13,7 @@ urlpatterns = [
         name="informacoes_visitante"
     ),
     path(
-        'visitantes/<int:id>/finalizar-visita', 
+        'informacoes-visitante/<int:id>/finalizar-visita', 
         finalizar_visita, 
         name="finalizar_visita"
     )

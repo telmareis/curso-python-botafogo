@@ -73,19 +73,19 @@ class Visitante(models.Model):
         if self.horario_autorizacao:
             return self.horario_autorizacao
 
-        return "Horário da autorização de entrada"
+        return "Visitante aguardando liberação"
 
     def get_morador_responsavel(self):
         if self.morador_responsavel:
             return self.morador_responsavel
 
-        return "Morador responsável"
+        return "Aguardando..."
 
     def get_placa_veiculo(self):
         if self.placa_veiculo:
             return self.placa_veiculo
 
-        return "Placa do veículo"
+        return "Sem carro..."
 
 
     class Meta:
