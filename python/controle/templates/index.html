@@ -1,20 +1,27 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
+
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">{{ nome_pagina }}</h1>
+
         <a href="{% url 'registrar_visitante' %}" class="btn btn-primary btn-icon-spit btn-sm">
+            <span class="text">Registrar visitante</span>
+
+            <span class="icon text-white-50">
+                <i class="fas fa-user-plus"></i>
+            </span>
+        </a> 
     </div>
 
     {% if messages %}
         {% for mensagem in messages %}
-            <div class="alert alert-sucess" role="alert">
-                {{ mensagem}}
+            <div class="alert alert-success" role="alert">
+                {{ mensagem }}
             </div>
         {% endfor %}
     {% endif %}
-
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
@@ -32,7 +39,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -49,7 +55,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
@@ -87,7 +92,6 @@
         <div class="card-header py-3 d-sm-flex align-items-center justify-content-between mb-4">
             <h6 class="m-0 font-weight-bold text-primary">Visitantes recentes</h6>
         </div>
-
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered">
@@ -99,7 +103,6 @@
                         <th>Autorizado por</th>
                         <th>Mais informações</th>
                     </thead>
-
                     <tbody>
                         {% for variavel in todos_visitantes %}
                         <tr>
@@ -109,7 +112,8 @@
                             <td>{{ variavel.horario_autorizacao }}</td>
                             <td>{{ variavel.morador_responsavel }}</td>
                             <td>
-                                <a href="{% url 'informacoes_visitante' id=variavel.id %}">
+
+                                <a href="{% url 'informacoes_visitante' id=variavel.id %}" >
                                     Ver informações
                                 </a>
                             </td>
