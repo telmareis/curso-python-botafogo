@@ -10,10 +10,13 @@ def registrar_visitante(request):
 
     if request.method == "POST":
         form = VisitanteForm(request.POST)
+        
         if form.is_valid():
             visitante = form.save(commit = False)
             visitante.registrado_por = Porteiro.objects.get(id=1)
+            
             visitante.save()
+            
             messages.success(
                 request,
                 "O Visitante foi registrado com sucesso!"

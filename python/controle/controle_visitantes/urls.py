@@ -8,7 +8,7 @@ urlpatterns = [
     path('', index, name="index"),
     path('registrar-visitante/', registrar_visitante, name="registrar_visitante"),
     path(
-        'informacoes_visitante/<int:id>/', 
+        'informacoes-visitante/<int:id>/', 
         informacoes_visitante, 
         name="informacoes_visitante"
     ),

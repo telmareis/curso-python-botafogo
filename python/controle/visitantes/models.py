@@ -1,12 +1,12 @@
 from django.db import models
 
-STATUS_VISITANTE = [
-    ("AGUARDANDO", "Aguardando autorização"),
-    ("EM_VISITA", "Em visita"),
-    ("FINALIZADO", "Visita finalizada"),
-]
-
 class Visitante(models.Model):
+    STATUS_VISITANTE = [
+        ("AGUARDANDO", "Aguardando autorização"),
+        ("EM_VISITA", "Em visita"),
+        ("FINALIZADO", "Visita finalizada"),
+    ]
+
     status = models.CharField(
         verbose_name = "Status",
         max_length = 10,

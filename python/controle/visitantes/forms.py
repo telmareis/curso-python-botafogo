@@ -12,7 +12,7 @@ class VisitanteForm(forms.ModelForm):
             "placa_veiculo",
         )
 
-        criar_mensagens = {
+        error_messages = {
             "nome_completo":{
                 "required": "O nome completo é obrigatório"
             },
